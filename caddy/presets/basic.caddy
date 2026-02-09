@@ -1,0 +1,5 @@
+(basic_site) {
+	import security_headers
+	import error_handling
+	import detailed_log
+}

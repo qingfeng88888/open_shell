@@ -1,0 +1,9 @@
+(error_handling) {
+	handle_errors {
+		@5xx expression {http.error.status_code} >= 500
+		respond @5xx "服务暂时不可用，请稍后重试" 503
+
+		@4xx expression {http.error.status_code} >= 400
+		respond @4xx "请求错误" {http.error.status_code}
+	}
+}

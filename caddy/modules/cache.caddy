@@ -1,0 +1,4 @@
+(static_cache) {
+	@assets path_regexp \.(jpg|jpeg|png|gif|webp|svg|ico|bmp|avif|icon|css|js|mjs|map|woff2?|ttf|otf|eot|wasm)$
+	header @assets Cache-Control "public, max-age=2592000, immutable"
+}

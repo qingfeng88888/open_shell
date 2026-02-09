@@ -1,0 +1,7 @@
+(standard_site) {
+	import compression
+	import security_headers
+	import static_cache
+	import error_handling
+	import detailed_log
+}

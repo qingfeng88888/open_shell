@@ -1,0 +1,19 @@
+(site_static) {
+	# 压缩
+	import compression
+
+	# 安全头
+	import security_headers
+
+	# 静态资源缓存
+	import static_cache
+
+	# 错误处理
+	import error_handling
+
+	# 日志
+	import detailed_log
+
+	# 静态文件服务（站点内必须先定义 root）
+	file_server
+}

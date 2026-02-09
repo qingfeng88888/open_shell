@@ -1,0 +1,33 @@
+(block_bad_ips) {
+	@blockedips remote_ip \
+		66.132.159.0/24 \
+		162.142.125.0/24 \
+		167.94.138.0/24 \
+		167.94.145.0/24 \
+		167.94.146.0/24 \
+		167.248.133.0/24 \
+		199.45.154.0/24 \
+		199.45.155.0/24 \
+		206.168.34.0/24 \
+		206.168.35.0/24 \
+		2602:80d:1000:b0cc:e::/80 \
+		2620:96:e000:b0cc:e::/80 \
+		2602:80d:1003::/112 \
+		2602:80d:1004::/112
+
+	handle @blockedips {
+		respond "Your IP has been blocked." 403 {
+			close
+		}
+	}
+}
+
+(block_bad_bots) {
+	@badbots header_regexp User-Agent "(?i)censys|shodan|zoomeye|ahrefs|mj12|semrush|dotbot|libwww-perl|nmap|masscan|dirbuster|sqlmap|nikto|wpscan|whatweb|wget|fetch|httpclient|crawler|scrapy|httpx|netcraft|zgrab|nessus|openvas"
+
+	handle @badbots {
+		respond "Access denied" 403 {
+			close
+		}
+	}
+}

@@ -1,0 +1,11 @@
+(load_balance_template) {
+	reverse_proxy {
+		to 192.168.100.1:80 192.168.100.2:80
+		lb_policy round_robin
+		lb_try_duration 30s
+		lb_try_interval 250ms
+		fail_duration 30s
+		max_fails 3
+		unhealthy_status 5xx
+	}
+}

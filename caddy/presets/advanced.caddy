@@ -1,0 +1,9 @@
+(advanced_site) {
+	import compression
+	import security_headers
+	import static_cache
+	import block_bad_ips
+	import block_bad_bots
+	import error_handling
+	import detailed_log
+}

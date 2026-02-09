@@ -1,0 +1,7 @@
+(transport_optimize) {
+	transport http {
+		dial_timeout 2s
+		keepalive 30s
+		keepalive_idle_conns 100
+	}
+}

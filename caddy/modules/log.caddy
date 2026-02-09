@@ -1,0 +1,9 @@
+(detailed_log) {
+	log {
+		level INFO
+		output file /var/log/caddy/caddy-web.log {
+			roll_size 10MB
+			roll_keep 10
+		}
+	}
+}
