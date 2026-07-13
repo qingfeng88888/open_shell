@@ -1,6 +1,25 @@
 
 ## 路飞工具箱
 
+生成密钥
+
+```
+ssh-keygen -q -t ed25519 -C "310478073@qq.com" -N "" -f
+```
+
+然后
+
+```
+config --global user.email "310478073@qq.com"
+```
+
+和
+
+```
+git config --global user.name "woniu336"
+```
+
+
 
 文件行结束符格式不一致，Git 会自动转换.
 
