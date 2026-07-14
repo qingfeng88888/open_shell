@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Debian 12: 通过 sysctl 永久关闭 / 开启 IPv6（方法一）
 # 用法:
-#   sudo ./disable-ipv6-debian12.sh          # 关闭 IPv6
-#   sudo ./disable-ipv6-debian12.sh disable  # 关闭 IPv6
-#   sudo ./disable-ipv6-debian12.sh enable   # 恢复 IPv6
-#   sudo ./disable-ipv6-debian12.sh status   # 查看状态
+#   sudo ./offipv6.sh          # 关闭 IPv6
+#   sudo ./offipv6.sh disable  # 关闭 IPv6
+#   sudo ./offipv6.sh enable   # 恢复 IPv6
+#   sudo ./offipv6.sh status   # 查看状态
 
 set -euo pipefail
 
